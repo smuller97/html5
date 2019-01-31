@@ -3,6 +3,7 @@
     <head>
         <title>Semantic Elements</title>
         <meta charset="UTF-8">
+        
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <style>
         h1,h2{
@@ -19,9 +20,31 @@
             min-width: 120px;
             align-items: center;
         }
+        li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.nav a:hover{ 
+    background-color: #000;
+}
+
+.nav .active{
+    background-color: red;
+}
     </style>
     </head>
     <body>
+         <!-- Navigation bar-->
+         <ul class="nav" style="list-style-type: none;  margin: 0;  padding: 0; overflow: hidden; background-color: #333; top: 0; width: 100%;">
+                <li  style="float: left;"><a   href="../index.html"> Forside</a></li>
+                <li style="float: left;"><a   class="active" href="semanticelements.html"> Semantic Elements</a></li>
+            </ul>
+         
+         
         <h1 style="text-align: center">Semantic Elements</h1>
         
         <!-- Navigationsbar-->
