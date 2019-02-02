@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Forms i HTML</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Navigation bar-->
+        <nav class="navigationbar" > 
+            <a href="../index.html" >Forside</a>
+            <a href="semanticelements.html" >Semantic Elements</a> 
+            <a href="canvas.html" >Canvas element</a> 
+            <a href="billedevideo.html" >Billede og video element</a> 
+            <a href="form.html">Forms</a>
+        </nav>
+
+        <h1 style="text-align: center">Form</h1>
+        <h2>Text-felt</h2>
+        <form>
+            <input type="text" name="firstname" value="Fornavn">
+            <br>
+            <input type="text" name="lastname" value="Efternavn">
+        </form>
+        <h2><br>Radio knapper</h2>
+        <p>Nedenfor ses radioknapper:</p>
+        <form>
+                <input type="radio" name="gender" value="male" > Mand<br>
+                <input type="radio" name="gender" value="female" checked> Kvinde<br>
+                <input type="radio" name="gender" value="other"> Andet
+        </form>
+
+        <h2><br>Submet knap</h2>
+        <p>Nedenfor ses en submit-knap:</p>
+        <form>
+            <input type="submit" value="Submit">
+        </form> 
+
+
+        <p>___________________________________________________________________________________________________________________________________________________________________________________________</p>
+        <h1 style=" text-align: center;">Forklaring</h1>
+      
+        <p>En form definere en form til at indsamle user-indput</p>
+        <p>Af indput findes der 3 typer</p>
+        <ul>
+            <li>text - Er en-linje input felt </li>
+            <li>radio-Valgmulighedsknapper, hvor der er forskellige valgmuligheder, fx mand,kvinde,andet hvis mang skal spørge om køn </li>
+            <li>submit-En knap man kan klikke på for af "gemme data" indtastet i formen</li>
+        </ul> 
+        <p>Af attributter findes der 8 stk.</p>
+        <ul>
+            <li>Accept - charset -Specificere hvilket charset der anvendes til indsendelse af data</li>
+            <li>Action - Specificere hvor data skal indsendes til</li>
+            <li>Autocomplete - Specificere om browseren skal autoudfylde formen</li>
+            <li>Enctype - Specificere hvilken kodetype, den indsendte data er</li>
+            <li>Method - Specificere HTTP metode der anvendes når data indsendes</li>
+            <li>Name - Specificere navn af form til identificering i kode-delen</li>
+            <li>Novalidate - Specificere browseren ikke skal validere formen</li>
+            <li>Target - Specificere målet for addressen i en action attribute</li>
+        </ul> 
+    </body>
+</html>
