@@ -3,50 +3,20 @@
     <head>
         <title>Semantic Elements</title>
         <meta charset="UTF-8">
-        
+        <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <style>
-        h1,h2{
-            margin: 2px;
-        }
-        p,li,ul{
-            margin-top: 0px;
-            text-align: justify;
-        }
-        header{
-            
-            display: flex;
-            height: 120px;
-            min-width: 120px;
-            align-items: center;
-        }
-        li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.nav a:hover{ 
-    background-color: #000;
-}
-
-.nav .active{
-    background-color: red;
-}
-    </style>
     </head>
     <body>
-         <!-- Navigation bar-->
-         <ul class="nav" style="list-style-type: none;  margin: 0;  padding: 0; overflow: hidden; background-color: #333; top: 0; width: 100%;">
-                <li  style="float: left;"><a   href="../index.html"> Forside</a></li>
-                <li style="float: left;"><a   class="active" href="semanticelements.html"> Semantic Elements</a></li>
-            </ul>
-         
-         
+        <!-- Navigation bar-->
+        <nav class="navigationbar" > 
+            <a href="../index.html" >Forside</a>
+            <a href="semanticelements.html" >Semantic Elements</a> 
+            <a href="canvas.html" >Canvas element</a> 
+        </nav>
+
+
         <h1 style="text-align: center">Semantic Elements</h1>
-        
+    
         <!-- Navigationsbar-->
         <nav style="background-color:lightcoral;"> 
             <a href="/detteErNavBar/">Dette er en navigation bar</a>|
@@ -59,46 +29,46 @@
         <!-- section-->
         <section style="background-color:lightgrey"> 
             <h1>Dette er en section</h1>
-            <p style="">Lorem ipsum dolor sit amet, auctor diam, nascetur nisl justo risus. Vel nibh feugiat primis, tempus commodo et. Bibendum augue aliquam euismod, purus pede, torquent porta velit eu dignissim laoreet, ante nec. Amet per nec urna. Explicabo elit, quam pellentesque justo leo nisl, eget sit praesent non ut. Rutrum velit, nostra gravida elit est pulvinar aliquet a, urna varius sed praesent libero. Facilisi sed sit, fames turpis consectetuer consequat urna ut, sodales ultricies porttitor congue vitae, id wisi. Vestibulum est cursus aptent viverra vehicula ante, nibh vero eleifend est netus habitasse consectetuer, mollis risus non per semper vulputate, ac pellentesque ullamcorper dictum feugiat imperdiet. Suspendisse sit ut, justo est. Mauris mollis ullamcorper libero congue. Porta amet ante augue et a eu, nec ut, ac varius mus tempor sed dictum eros, egestas nonummy. Mi consequat non pretium nulla non.</p>
-            <aside style="float:right; font-style: italic; padding: 10px;background-color:powderblue;">
-                <h1>Dette er aside</h1>
-                <p style="text-align: justify; ">Lorem ipsum dolor sit amet, auctor diam, nascetur nisl justo risus.</p>
-            </aside> <!-- Aside-->
+            <p>Lorem ipsum dolor sit amet, auctor diam, nascetur nisl justo risus. Vel nibh feugiat primis, tempus commodo et. Bibendum augue aliquam euismod, purus pede, torquent porta velit eu dignissim laoreet, ante nec. Amet per nec urna. Explicabo elit, quam pellentesque justo leo nisl, eget sit praesent non ut. Rutrum velit, nostra gravida elit est pulvinar aliquet a, urna varius sed praesent libero. Facilisi sed sit, fames turpis consectetuer consequat urna ut, sodales ultricies porttitor congue vitae, id wisi. Vestibulum est cursus aptent viverra vehicula ante, nibh vero eleifend est netus habitasse consectetuer, mollis risus non per semper vulputate, ac pellentesque ullamcorper dictum feugiat imperdiet. Suspendisse sit ut, justo est. Mauris mollis ullamcorper libero congue. Porta amet ante augue et a eu, nec ut, ac varius mus tempor sed dictum eros, egestas nonummy. Mi consequat non pretium nulla non.</p>
+                <aside style="float:right; font-style: italic; padding: 10px;background-color:powderblue;">
+                    <h1>Dette er aside</h1>
+                    <p style="text-align: justify; ">Lorem ipsum dolor sit amet, auctor diam, nascetur nisl justo risus.</p>
+                </aside> <!-- Aside-->
             <p style="text-align: justify">liulhgLorem ipsum dolor sit amet, auctor diam, nascetur nisl justo risus. Vel nibh feugiat primis, tempus commodo et. Bibendum augue aliquam euismod, purus pede, torquent porta velit eu dignissim laoreet, ante nec. Amet per nec urna. Explicabo elit, quam pellentesque justo leo nisl, eget sit praesent non ut. Rutrum velit, nostra gravida elit est pulvinar aliquet a, urna varius sed praesent libero. Facilisi sed sit, fames turpis consectetuer consequat urna ut, sodales ultricies porttitor congue vitae, id wisi. Vestibulum est cursus aptent viverra vehicula ante, nibh vero eleifend est netus habitasse consectetuer, mollis risus non per semper vulputate, ac pellentesque ullamcorper dictum feugiat imperdiet. Suspendisse sit ut, justo est. Mauris mollis ullamcorper libero congue. Porta amet ante augue et a eu, nec ut, ac varius mus tempor sed dictum eros, egestas nonummy. Mi consequat non pretium nulla non.</p>
             <p style="text-align: justify">grsgrdsLorem ipsum dolor sit amet, auctor diam, nascetur nisl justo risus. Vel nibh feugiat primis, tempus commodo et. Bibendum augue aliquam euismod, purus pede, torquent porta velit eu dignissim laoreet, ante nec. Amet per nec urna. Explicabo elit, quam pellentesque justo leo nisl, eget sit praesent non ut. Rutrum velit, nostra gravida elit est pulvinar aliquet a, urna varius sed praesent libero. Facilisi sed sit, fames turpis consectetuer consequat urna ut, sodales ultricies porttitor congue vitae, id wisi. Vestibulum est cursus aptent viverra vehicula ante, nibh vero eleifend est netus habitasse consectetuer, mollis risus non per semper vulputate, ac pellentesque ullamcorper dictum feugiat imperdiet. Suspendisse sit ut, justo est. Mauris mollis ullamcorper libero congue. Porta amet ante augue et a eu, nec ut, ac varius mus tempor sed dictum eros, egestas nonummy. Mi consequat non pretium nulla non.</p>
         </section>  
-       
+    
         <!-- Header-->
         <header style="background-color: pink;">
             <h1 style=" font-style: italic">Dette er en header</h1>
         </header>
-        
-        
+    
+    
         <!-- Article-->
         <article style="background-color:lightseagreen"> 
             <h1>Dette  er en article</h1>
             <p>Lorem ipsum dolor sit amet, auctor diam, nascetur nisl justo risus. Vel nibh feugiat primis, tempus commodo et. Bibendum augue aliquam euismod, purus pede, torquent porta velit eu dignissim laoreet, ante nec. Amet per nec urna. Explicabo elit, quam pellentesque justo leo nisl, eget sit praesent non ut. Rutrum velit, nostra gravida elit est pulvinar aliquet a, urna varius sed praesent libero. Facilisi sed sit, fames turpis consectetuer consequat urna ut, sodales ultricies porttitor congue vitae, id wisi. Vestibulum est cursus aptent viverra vehicula ante, nibh vero eleifend est netus habitasse consectetuer, mollis risus non per semper vulputate, ac pellentesque ullamcorper dictum feugiat imperdiet. Suspendisse sit ut, justo est. Mauris mollis ullamcorper libero congue. Porta amet ante augue et a eu, nec ut, ac varius mus tempor sed dictum eros, egestas nonummy. Mi consequat non pretium nulla non.Lorem ipsum dolor sit amet, auctor diam, nascetur nisl justo risus. Vel nibh feugiat primis, tempus commodo et. Bibendum augue aliquam euismod, purus pede, torquent porta velit eu dignissim laoreet, ante nec. Amet per nec urna. Explicabo elit, quam pellentesque justo leo nisl, eget sit praesent non ut. Rutrum velit, nostra gravida elit est pulvinar aliquet a, urna varius sed praesent libero. Facilisi sed sit, fames turpis consectetuer consequat urna ut, sodales ultricies porttitor congue vitae, id wisi. Vestibulum est cursus aptent viverra vehicula ante, nibh vero eleifend est netus habitasse consectetuer, mollis risus non per semper vulputate, ac pellentesque ullamcorper dictum feugiat imperdiet. Suspendisse sit ut, justo est. Mauris mollis ullamcorper libero congue. Porta amet ante augue et a eu, nec ut, ac varius mus tempor sed dictum eros, egestas nonummy. Mi consequat non pretium nulla non.Lorem ipsum dolor sit amet, auctor diam, nascetur nisl justo risus. Vel nibh feugiat primis, tempus commodo et. Bibendum augue aliquam euismod, purus pede, torquent porta velit eu dignissim laoreet, ante nec. Amet per nec urna. Explicabo elit, quam pellentesque justo leo nisl, eget sit praesent non ut. Rutrum velit, nostra gravida elit est pulvinar aliquet a, urna varius sed praesent libero. Facilisi sed sit, fames turpis consectetuer consequat urna ut, sodales ultricies porttitor congue vitae, id wisi. Vestibulum est cursus aptent viverra vehicula ante, nibh vero eleifend est netus habitasse consectetuer, mollis risus non per semper vulputate, ac pellentesque ullamcorper dictum feugiat imperdiet. Suspendisse sit ut, justo est. Mauris mollis ullamcorper libero congue. Porta amet ante augue et a eu, nec ut, ac varius mus tempor sed dictum eros, egestas nonummy. Mi consequat non pretium nulla non.</p>
         </article>
-        
-        
+    
+    
         <!-- Fotter-->
         <footer style="background-color:lightsteelblue"> 
             <h1>Dette er en footer</h1>
             <p>Posted by: Smuller</p>
             <p>Contact information: <a href="mailto:someone@example.com"> xoxo@example.com</a>.</p>
         </footer>
-        
+    
         <p>___________________________________________________________________________________________________________________________________________________________________________________________</p>
         <h1 style=" text-align: center;">Forklaring</h1>
         <p>Ovenfor ses hvert af elementerne vist.<br> Men hvad betyder hvert af taggene og hvad bruges de til? <br>Det vil jeg nu forklare dig!</p>    
-        
+    
         <h2 style="background-color:lightcoral;" >&lt;nav&gt;</h2>
         <p style="margin-bottom: 2px;"> Det er et element, som definerer en række navigationslinkes, til andre sider på en hjemmeside.</p>
-         <ul>
+        <ul>
             <li>Typisk ses en navigationsbar i toppen af en hjemmeside </li>
         </ul> 
-        
-         <h2 style="background-color:lightgrey" >&lt;Section&gt;</h2>
+    
+        <h2 style="background-color:lightgrey" >&lt;Section&gt;</h2>
         <p style="margin-bottom: 2px;">Det er et element, der definere en sektion i et dokument. </p>
         <p style=" margin-top: 0px; margin-bottom: 0px; text-align: justify;">Det kan være:</p>
         <ul>
@@ -107,10 +77,10 @@
             <li>En sidefod</li>
             <li>En anden form for sektion af et dokument</li>
         </ul>  
-        
+    
         <h2 style="background-color:powderblue;">&lt;aside&gt;</h2>
         <p>Det er et element, som definerer noget indhold til side fra det indhold, og elementet er placeret i som et side element</p>
-               
+            
         <h2 style="background-color: pink;">&lt;header&gt;</h2>
         <p style="margin-bottom: 2px;">Det er et element, som repræsenterer indledende indhold.</p>
         <p style=" margin-top: 0px; margin-bottom: 0px; text-align: justify;"> Typisk: </p>
@@ -126,17 +96,16 @@
             <li>et forfatternavn</li>
             <li>Andre elementer</li>
         </ul>  
-        
+    
         <h2 style="background-color:lightseagreen">&lt;article&gt;</h2>
-         <p style="margin-bottom: 2px;">Det er et element, som man skal kan læse for sig - det skal være uafhængig selstændig indhold.</p>
+        <p style="margin-bottom: 2px;">Det er et element, som man skal kan læse for sig - det skal være uafhængig selstændig indhold.</p>
         <p style=" margin-top: 0px; margin-bottom: 0px; text-align: justify;">Det kan anvendes fx når der laves:</p>
         <ul>
             <li>Forum posts </li>
             <li>Blog posts</li>
             <li>Nyhedsartikler</li>
         </ul>  
-        
-        
+    
         <h2 style="background-color:lightsteelblue">&lt;footer&gt;</h2>
         <p style="margin-bottom: 2px;">Det er et element, der definere foden af en sektion eller et html dokument.</p>
         <p style=" margin-top: 0px; margin-bottom: 0px; text-align: justify;"> Indeholder normalt oplysninger som eksempelvis:</p>
@@ -146,5 +115,6 @@
             <li>links til brugsbetingelser</li>
             <li> privatlivspolitik </li>
         </ul>  
-    </body>
+    
+        </body>
 </html>
