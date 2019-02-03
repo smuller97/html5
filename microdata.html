@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+        <h1>Eksempel paa brug af microdata:</h1>
+        <br>
+        <br>
+        <br>
+
+        <section itemscope itemtype="https://schema.org/Restaurant"><!--Vocabulary, skal hentes fra en side. Her findes den på schema.org-->
+
+            <h1 itemprop="name">Restaurant navn</h1><!--Item property Name, navnet på restauranten-->
+
+            <div itemprop="menu"><!--Item property Menu, som har under-properties-->
+            <h2>Restaurant menu</h2>
+            <ul>
+                <li>Super tacos</li>
+                <li>Burito</li>
+                <li>Leverpostejs mad</li>
+            </ul>
+            </div>
+            <br>
+            <br>
+            <p>Telefon nummer: </p>
+            <p itemprop="telephone">00 00 00 00</p><!--Item property Telephone, igen dette er en attribut-->
+            <br>
+            <br>
+            <div itemscope itemtype="https://schema.org/Person"><!--En anden microdata struktur inden i vores retaurant struktur-->
+                <p>Ejer:</p>
+                <br>
+                <p itemprop="name">John Johnsen</p>
+                <br>
+                <p>Telefon nummer: </p>
+                <p itemprop="telephone">11 11 11 11</p>
+            </div>
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <h3>
+            Microdata er en datastruktur. For at skabe sin struktur skal man have et vocabulary, hvilket i dette tilfaelde er schema.org
+            <br>
+            Det der er saa specielt ved microdata strukturen er, at man kan referer til andre microdata strukturer. 
+            <br>
+            F.eks her referer vi til at ejeren er af microdata strukturen; Person.(også fra schema.org)
+        </h3>
+
+    </body>
+</html>
