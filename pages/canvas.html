@@ -4,6 +4,7 @@
         <title>Semantic Elements</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>src="../script/spiral.js"</script>
         <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
             <style>
                 canvas{
@@ -11,7 +12,7 @@
                 }
             </style>
     </head>
-    <body>
+    <body onload="start()">
         <!-- Navigation bar-->
         <nav class="navigationbar"> 
             <a href="../index.html">Forside</a>
@@ -35,6 +36,17 @@
         <p>Efterfølgende udarbejdes der nogle variable som indeholder de ønskede informationer der skal anvendes i tegningen</p>
         <p>Til den overstående tegning er der anvendt variable, såsom antal af ringe i en cirkel, bredden på hver segment i cirklens ring, cirklens vinkel i radians er beregnet gennem en formel og længden på linjernes længde er til sidst valgt.</p>
     
+        <p>___________________________________________________________________________________________________________________________________________________________________________________________</p>
+
+                
+        <canvas id="c" width="600" height="600"
+        style="border:1px solid #d3d3d3;">
+        Your browser does not support the canvas element.
+        </canvas>
+
+        <button onclick="op()">Op</button>
+        <button onclick="ned()">Ned</button>
+        
     </body>
     <script>
         var canvas = document.getElementById('myCanvas'); //Søger html igennem og finder elementet  der hedder myCanvas
@@ -87,6 +99,11 @@
         
         // Metoden init kaldes, fordi den laver en enstans af diagrammet og tegner den
         init();
+
+
+
+
+
 
     </script>
 </html>
