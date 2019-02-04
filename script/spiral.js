@@ -1,5 +1,5 @@
 
-//var sving=0;
+var sving=0; //drej spiralen
 var anglevalue =0.1; //vinklen mellem hver steg
 
 function start()
@@ -25,28 +25,29 @@ var centery = context.canvas.height / 2; //midten på y aksen
 
     for (i = 0; i < 16000; i++) { //loop med lineTo
         angle = anglevalue * i; //gør vinklen større pr gennemgang
-        x = centerx + (midten + mellemrum * angle) * Math.cos(angle); //udregning for at flytte x +sving
-        y = centery + (midten + mellemrum * angle) * Math.sin(angle); //udregning for at flytte y +sving
+        x = centerx + (midten + mellemrum * angle) * Math.cos(angle+sving); //udregning for at flytte x 
+        y = centery + (midten + mellemrum * angle) * Math.sin(angle+sving); //udregning for at flytte y 
 
         context.lineTo(x, y); //laver en linje til den ny fundne position
     }
     context.strokeStyle = "#000"; //farven på spiralen
     context.stroke(); //tegn spiralen
-  /*  if (sving >=6.2)
+   
+    if (sving >=6.2) //svig drejer spiralen, indtil under 6.2 hvilket er en runde
     {
     sving =0; 
     }
     else
     {
     sving = sving + Math.PI/5;
-    } */
+    } 
 }
 
 function op() 
 {
-	anglevalue=anglevalue+0.1;
+	anglevalue=anglevalue+0.1; //øg vinklen
 }
 function ned() 
 {
-	anglevalue=anglevalue-0.1;
+	anglevalue=anglevalue-0.1; //minsk vinklen
 }
