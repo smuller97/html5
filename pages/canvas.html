@@ -5,6 +5,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../script/spiral.js"></script>
+        <script src="../script/strege.js"></script>
         <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
             <style>
                 canvas{
@@ -46,6 +47,11 @@
 
         <button onclick="op()">Op</button>
         <button onclick="ned()">Ned</button>
+        <br/>
+        <canvas id="stregeCanvas" width="200" height="200" style="border:1px solid #d3d3d3;"> Your browser does not support the HTML5 canvas tag.</canvas>
+        <p>90° / <input type="number" id="opdelnr" step="0.1" value="4"> vinkel mellem streger</p> 
+        <br/>
+        <input type="submit" value="Opdel" onclick="Tegnstreger()">
 
     </body>
     <script>
