@@ -17,11 +17,6 @@ nav.navigationbar a{
     padding: 14px 16px;
     text-decoration: none;
 }
-
-
-h1,h2{
-    margin: 2px;
-}
 p{
     margin-top: 0px;
     text-align: justify;
@@ -43,7 +38,6 @@ header{
     min-width: 120px;
     align-items: center;
 }
-
 body{
     margin: 0;
 }
