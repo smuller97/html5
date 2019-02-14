@@ -6,32 +6,46 @@
         <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="../script/jquery-3.3.1.slim.min.js"></script>
+        <script src="../script/popper.min.js"></script>
+        <script src="../script/bootstrap.min.js"></script> 
     </head>
     <body>
         <!-- Navigation bar-->
-        <nav class="navigationbar" > 
-            <a href="../index.html" >Forside</a>
-            <a href="semanticelements.html" >Semantic Elements</a> 
-            <a href="canvas.html" >Canvas element</a> 
-            <a href="billedevideo.html" >Billede og video element</a> 
-            <a href="form.html">Forms</a>
-            <a href="microdata.html">Microdata</a>
+        <nav id="navbar-site" class="navbar navbar-dark bg-dark navbar-expand-sm sticky-top">
+                <div class="container">
+                    <div class="navbar-nav">
+                        <a class="navbar-brand nav-item nav-link" href="../index.html">Forside</a>
+                        <div class="dropdown">
+                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">HTML</a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="pages/semanticelements.html"  >Semantic Elements</a>
+                                <a class="dropdown-item" href="pages/canvas.html">Canvas element</a>
+                                <a class="dropdown-item" href="pages/billedevideo.html" >Billede og video element</a>
+                                <a class="dropdown-item" href="pages/form.html">Forms</a>
+                                <a class="dropdown-item" href="pages/microdata.html">Microdata</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </nav>
-        <h1 style="text-align: center">Billede og video elements</h1>
-        <video height="300" controls autoplay loop><source src="../files/video.mp4" type="video/mp4">Din browser kan ikke få vist video i video html tagget</video>
-        <img style="vertical-align: unset;" src="../files/billede.jpg" alt="Billedet viser et citat på engelsk. Der står smile, you are beautiful" height="300">
-        <p>___________________________________________________________________________________________________________________________________________________________________________________________</p>
-        <h1 style=" text-align: center;">Forklaring</h1>
-        <h2 style=" background-color: pink;">&lt;video&gt;</h2>
-        <p>Før i tiden, før HTML5 var en del af hjemmesiders opbygning, så skulle man anvende et plug-in for at kunne se videoer. </p>
-        <p>I dag er det blevet til et element i HTML ved navn &lt;video&gt; så det er muligt direkte at gøre en video en del af en hjemmeside</p>
-        
-        <h2 style=" background-color: magenta;">&lt;img&gt;</h2>
-        <p>Billeder er i HTML5 deffineret med tagget &lt;img&gt;</p>
-        <p>Tagget er tomt og indeholder kun attributter</p>
-        <ul>
-            <li> Attributten src indeholder hvor billedet ligger henne, det kan være i en mappe eller url til en hjemmeside</li>
-            <li> Attributten alt indeholder en alternativ beskrivelse af billedet så en person der ikke kan se eller indlæse billedet kan læse sig til hvad der er på billedet.</li>
-        </ul>  
+        <div class="container">
+            <h1 style="text-align: center">Billede og video elements</h1>
+            <video height="300" controls autoplay loop><source src="../files/video.mp4" type="video/mp4">Din browser kan ikke få vist video i video html tagget</video>
+            <img style="vertical-align: unset;" src="../files/billede.jpg" alt="Billedet viser et citat på engelsk. Der står smile, you are beautiful" height="300">
+            <p>___________________________________________________________________________________________________________________________________________________________________________________________</p>
+            <h1 style=" text-align: center;">Forklaring</h1>
+            <h2 style=" background-color: pink;">&lt;video&gt;</h2>
+            <p>Før i tiden, før HTML5 var en del af hjemmesiders opbygning, så skulle man anvende et plug-in for at kunne se videoer. </p>
+            <p>I dag er det blevet til et element i HTML ved navn &lt;video&gt; så det er muligt direkte at gøre en video en del af en hjemmeside</p>
+            
+            <h2 style=" background-color: magenta;">&lt;img&gt;</h2>
+            <p>Billeder er i HTML5 deffineret med tagget &lt;img&gt;</p>
+            <p>Tagget er tomt og indeholder kun attributter</p>
+            <ul>
+                <li> Attributten src indeholder hvor billedet ligger henne, det kan være i en mappe eller url til en hjemmeside</li>
+                <li> Attributten alt indeholder en alternativ beskrivelse af billedet så en person der ikke kan se eller indlæse billedet kan læse sig til hvad der er på billedet.</li>
+            </ul>
+        </div>
         </body>
 </html>
