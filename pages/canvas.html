@@ -4,8 +4,6 @@
         <title>Canvas</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="../script/spiral.js"></script>
-        <script src="../script/strege.js"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
         <link rel="icon" href="../files/icon.png" type="image/png">  <!--ICON--> <!-- From https://www.iconfinder.com/icons/430099/heart_icon -->
@@ -21,7 +19,7 @@
     <body onload="start()">
     <div id="navigation">
         <script>    
-            $("#navigation").load("navigation.html");
+            $("#navigation").load("/html5/pages/navigation.html");
         </script>
     </div>
     <div class="container">
@@ -40,35 +38,7 @@
         <p>Til den overstående tegning er der anvendt variable, såsom antal af ringe i en cirkel, bredden på hver segment i cirklens ring, cirklens vinkel i radians er beregnet gennem en formel og længden på linjernes længde er til sidst valgt.</p>
     
         <p class="linje"></p>
-
                 
-        <canvas id="c" width="300" height="300"
-        style="border:1px solid #d3d3d3;">
-        Your browser does not support the canvas element.
-        </canvas>
-
-        <button onclick="op()">Op</button>
-        <button onclick="ned()">Ned</button>
-        <button onclick="stopcanvas()">stop</button>
-        <button onclick="startcanvas()">start</button>
-        <br/>
-        <p>Canvas'et bliver fundet ved hjælp af browser object model, hvor den i JS bliver fundet med document.getElementById()</p>
-        <p>Knapperne "op, ned, stop" og "start" kalder en JS metode.</p>
-
-        <br/>
-        <canvas id="stregeCanvas" width="200" height="200" style="border:1px solid #d3d3d3;"> Your browser does not support the HTML5 canvas tag.</canvas>
-        <p>90° / <input type="number" id="opdelnr" step="0.1" value="4"> vinkel mellem streger</p> 
-        <br/>
-        <input type="submit" value="Opdel" onclick="Tegnstreger()">
-
-        <p class="linje"></p>
-        <h1 style=" text-align: center;">Forklaring</h1>
-        <h2 style="background-color: pink;">&lt;JavaScript&gt;</h2>        
-        <p>JavaScript kan bruges til at kumunikere med brugeren, i form af onclick events f.eks. som når man trykker på stop knappen, så kør der en bestemt funktion i JS.</p>
-        <p>JS kan Finde HTML elementer ved hjælp af getElementById() hvor man også kan ændre html'en for det fundne element ved brugen af .innerHTML = "(det nye html)".</p>
-        <p>JS kan blive placeret i *head*, *body* eller i en external fil.js - en external JS fil bliver kaldt i *head*:<script src="../script/bootstrap.min.js"></script>. </p>
-        <p>For at deklarere en variabel i JS bruger man *var* og for at give en værdi sætter man variabelen *=* værdien</p>
-        <p class="linje"></p>
 
     </div>
 
@@ -131,4 +101,9 @@
 
 
     </script>
+    <footer id="footer">
+        <script>    
+            $("#footer").load("/html5/pages/footer.html");
+        </script>
+    </footer>
 </html>
