@@ -34,7 +34,7 @@ var centery = context.canvas.height / 2; //midten på y aksen
     context.strokeStyle = "#000"; //farven på spiralen
     context.stroke(); //tegn spiralen
    
-    if (stop==false)
+    if (stop===false)
     {    
         if (sving >=6.2) //svig drejer spiralen, indtil under 6.2 hvilket er en runde
         {
