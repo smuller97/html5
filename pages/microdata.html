@@ -1,23 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="da">
     <head>
             <title>Microdata</title>
-            <meta charset="UTF-8">
+            <meta charset="UTF-8">            
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
             <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="../script/jquery-3.3.1.slim.min.js"></script>
+            <script src="../script/popper.min.js"></script>
+            <script src="../script/bootstrap.min.js"></script> 
     </head>
     <body>
         <!-- Navigation bar-->
-        <nav class="navigationbar" > 
-            <a href="../index.html" >Forside</a>
-            <a href="semanticelements.html" >Semantic Elements</a> 
-            <a href="canvas.html" >Canvas element</a> 
-            <a href="billedevideo.html" >Billede og video element</a> 
-            <a href="form.html">Forms</a>
-            <a href="microdata.html">Microdata</a>
+        <nav id="navbar-site" class="navbar navbar-dark bg-dark navbar-expand-sm sticky-top">
+                <div class="container">
+                    <div class="navbar-nav">
+                        <a class="navbar-brand nav-item nav-link" href="../index.html">Forside</a>
+                        <div class="dropdown">
+                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">HTML</a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item" href="semanticelements.html"  >Semantic Elements</a>
+                                <a class="dropdown-item" href="canvas.html">Canvas element</a>
+                                <a class="dropdown-item" href="billedevideo.html" >Billede og video element</a>
+                                <a class="dropdown-item" href="form.html">Forms</a>
+                                <a class="dropdown-item active" href="microdata.html">Microdata</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </nav>
-
-        <h1>Eksempel paa brug af microdata:</h1>
+    <div class="container">
+        <h1>Eksempel på brug af microdata:</h1>
         <br>
         <br>
         <br>
@@ -50,16 +63,15 @@
             </div>
         </section>
 
-        <br>
-        <br>
-        <br>
-        <h3>
+        <p class="linje"></p>
+        <h1>Forklaring</h1>
+        <p>
             Microdata er en datastruktur. For at skabe sin struktur skal man have et vocabulary, hvilket i dette tilfaelde er schema.org
             <br>
             Det der er saa specielt ved microdata strukturen er, at man kan referer til andre microdata strukturer. 
             <br>
             F.eks her referer vi til at ejeren er af microdata strukturen; Person.(også fra schema.org)
-        </h3>
-
+        </p>
+    </div>
     </body>
 </html>

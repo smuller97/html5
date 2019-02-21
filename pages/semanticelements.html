@@ -1,34 +1,38 @@
 <!DOCTYPE html>
-<html>
+<html lang="da">
     <head>
         <title>Semantic Elements</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../script/jquery-3.3.1.slim.min.js"></script>
+        <script src="../script/popper.min.js"></script>
+        <script src="../script/bootstrap.min.js"></script> 
     </head>
     <body>
         <!-- Navigation bar-->
-        <nav class="navigationbar" > 
-            <a href="../index.html" >Forside</a>
-            <a href="semanticelements.html" >Semantic Elements</a> 
-            <a href="canvas.html" >Canvas element</a> 
-            <a href="billedevideo.html" >Billede og video element</a> 
-            <a href="form.html">Forms</a>
-            <a href="microdata.html">Microdata</a>
+        <nav id="navbar-site" class="navbar navbar-dark bg-dark navbar-expand-sm sticky-top">
+                <div class="container">
+                    <div class="navbar-nav">
+                        <a class="navbar-brand nav-item nav-link" href="../index.html">Forside</a>
+                        <div class="dropdown">
+                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">HTML</a>
+                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
+                                <a class="dropdown-item active" href="semanticelements.html"  >Semantic Elements</a>
+                                <a class="dropdown-item" href="canvas.html">Canvas element</a>
+                                <a class="dropdown-item" href="billedevideo.html" >Billede og video element</a>
+                                <a class="dropdown-item" href="form.html">Forms</a>
+                                <a class="dropdown-item" href="microdata.html">Microdata</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </nav>
 
-
+    <div class="container">
         <h1 style="text-align: center">Semantic Elements</h1>
     
-        <!-- Navigationsbar-->
-        <nav style="background-color:lightcoral;"> 
-            <a href="/detteErNavBar/">Dette er en navigation bar</a>|
-            <a href="/html/">HTML</a> |
-            <a href="/css/">CSS</a> |
-            <a href="/js/">JavaScript</a> |
-            <a href="/jquery/">jQuery</a> |
-        </nav>
-
         <!-- section-->
         <section style="background-color:lightgrey"> 
             <h1>Dette er en section</h1>
@@ -61,7 +65,7 @@
             <p>Contact information: <a href="mailto:someone@example.com"> xoxo@example.com</a>.</p>
         </footer>
     
-        <p>___________________________________________________________________________________________________________________________________________________________________________________________</p>
+        <p class="linje"></p>
         <h1 style=" text-align: center;">Forklaring</h1>
         <p>Ovenfor ses hvert af elementerne vist.<br> Men hvad betyder hvert af taggene og hvad bruges de til? <br>Det vil jeg nu forklare dig!</p>    
     
@@ -117,7 +121,7 @@
             <li>ophavsret informationer </li>
             <li>links til brugsbetingelser</li>
             <li> privatlivspolitik </li>
-        </ul>  
-    
+        </ul>
+    </div> 
         </body>
 </html>
