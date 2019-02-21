@@ -19,21 +19,37 @@
         </div>
         <div class="container">
             <h1 style="text-align: center">Billede og video elements</h1>
-            <video height="300" controls autoplay loop><source src="../files/video.mp4" type="video/mp4">Din browser kan ikke få vist video i video html tagget</video>
-            <img style="vertical-align: unset;" src="../files/billede.jpg" alt="Billedet viser et citat på engelsk. Der står smile, you are beautiful" height="300">
             <p class="linje"></p>
-            <h1 style=" text-align: center;">Forklaring</h1>
+
             <h2 style=" background-color: pink;">&lt;video&gt;</h2>
-            <p>Før i tiden, før HTML5 var en del af hjemmesiders opbygning, så skulle man anvende et plug-in for at kunne se videoer. </p>
-            <p>I dag er det blevet til et element i HTML ved navn &lt;video&gt; så det er muligt direkte at gøre en video en del af en hjemmeside</p>
-            
+            <div class="row">
+                
+
+                <div class="col-6 col-sm-7 col-md-8 col-lg-9">
+                    <p>Før i tiden, før HTML5 var en del af hjemmesiders opbygning, så skulle man anvende et plug-in for at kunne se videoer. </p>
+                    <p>I dag er det blevet til et element i HTML ved navn &lt;video&gt; så det er muligt direkte at gøre en video en del af en hjemmeside</p>
+                </div><!--slut col-->
+
+                <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+                    <video height="300" controls autoplay loop><source src="../files/video.mp4" type="video/mp4" alt="video">Din browser kan ikke få vist video i video html tagget</video>
+                </div><!--slut col-->
+            </div><!--slut row-->
+
             <h2 style=" background-color: magenta;">&lt;img&gt;</h2>
-            <p>Billeder er i HTML5 deffineret med tagget &lt;img&gt;</p>
-            <p>Tagget er tomt og indeholder kun attributter</p>
-            <ul>
-                <li> Attributten src indeholder hvor billedet ligger henne, det kan være i en mappe eller url til en hjemmeside</li>
-                <li> Attributten alt indeholder en alternativ beskrivelse af billedet så en person der ikke kan se eller indlæse billedet kan læse sig til hvad der er på billedet.</li>
-            </ul>
-        </div>
+            <div class="row">
+                <div class="col-6 col-sm-7 col-md-8 col-lg-9">
+                <p>Billeder er i HTML5 deffineret med tagget &lt;img&gt;</p>
+                <p>Tagget er tomt og indeholder kun attributter</p>
+                <ul>
+                    <li> Attributten src indeholder hvor billedet ligger henne, det kan være i en mappe eller url til en hjemmeside</li>
+                    <li> Attributten alt indeholder en alternativ beskrivelse af billedet så en person der ikke kan se eller indlæse billedet kan læse sig til hvad der er på billedet.</li>
+                </ul>
+                </div><!-- slut col-->
+
+                <div class="col-6 col-sm-5 col-md-4 col-lg-3">
+                    <img style="vertical-align: unset;" src="../files/billede.jpg" alt="Billedet viser et citat på engelsk. Der står smile, you are beautiful" height="300">
+                </div><!--slut col-->
+            </div><!--slut row-->
+        </section><!--slut container-->
         </body>
 </html>
