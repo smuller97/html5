@@ -45,7 +45,7 @@
         <h1 style=" text-align: center;">Forklaring</h1>
         <h2 style="background-color: pink;">&lt;canvas&gt;</h2>
         <p>Først og frammest, hvad er elementet canvas? Canvas elementet anvendes til at lave grafik til hjemmesider gennem scripting, typisk JavaScript.</p>
-        <p>Den første metode der anvendes i JavaScript er document.getElementById('myCanvas');. Metoden getElementById() i dokumentet søger gennem html koden til den vinder et element ved navn af myCanvas </p>
+        <p>Den første metode der anvendes i JavaScript er document.getElementById('myCanvas');. Metoden getElementById() i dokumentet søger gennem html koden til den finder et element ved navn af myCanvas </p>
         <p>Den anden metode der anvendes i JS er canvas.getContext('2d');. Metoden gør så indholdet i canvas er i 2d.</p>
         <p>Til udarbejdelsen af firkanten med stregen kommende ud fra midten, så er der fundet midten af Canvas ved at dividere bredden med 2 og det samme er gjordt med længden.</p>
         <p>Efterfølgende udarbejdes der nogle variable som indeholder de ønskede informationer der skal anvendes i tegningen</p>
@@ -61,6 +61,12 @@
 
         <button onclick="op()">Op</button>
         <button onclick="ned()">Ned</button>
+        <button onclick="stop()">stop</button>
+        <button onclick="start()">start</button>
+        <br/>
+        <p>Canvas'et bliver fundet ved hjælp af browser object model, hvor den i JS bliver fundet med document.getElementById()</p>
+        <p>Knapperne "op" og "ned" kalder en JS metode</p>
+
         <br/>
         <canvas id="stregeCanvas" width="200" height="200" style="border:1px solid #d3d3d3;"> Your browser does not support the HTML5 canvas tag.</canvas>
         <p>90° / <input type="number" id="opdelnr" step="0.1" value="4"> vinkel mellem streger</p> 

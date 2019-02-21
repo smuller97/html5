@@ -1,6 +1,7 @@
 
 var sving=0; //drej spiralen
 var anglevalue =0.1; //vinklen mellem hver steg
+var stop=false;
 
 function start()
 {  
@@ -33,14 +34,17 @@ var centery = context.canvas.height / 2; //midten på y aksen
     context.strokeStyle = "#000"; //farven på spiralen
     context.stroke(); //tegn spiralen
    
-    if (sving >=6.2) //svig drejer spiralen, indtil under 6.2 hvilket er en runde
-    {
-    sving =0; 
+    if (stop==false)
+    {    
+       /* if (sving >=6.2) //svig drejer spiralen, indtil under 6.2 hvilket er en runde
+        {
+        sving =0; 
+        }
+        else
+        {
+        sving = sving + Math.PI/5;
+        } */
     }
-    else
-    {
-    sving = sving + Math.PI/5;
-    } 
 }
 
 function op() 
@@ -50,4 +54,12 @@ function op()
 function ned() 
 {
 	anglevalue=anglevalue-0.1; //minsk vinklen
+}
+function stop() 
+{
+	stop=true; //minsk vinklen
+}
+function start() 
+{
+	stop=false; //minsk vinklen
 }
