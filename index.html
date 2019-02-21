@@ -7,29 +7,16 @@
         <link rel="icon" href="files/icon.png" type="image/png">  <!--ICON--> <!-- From https://www.iconfinder.com/icons/430099/heart_icon -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/bootstrap.min.css">
-        <script src="script/jquery-3.3.1.slim.min.js"></script>
+        <script src="script/jquery-3.3.1.min.js"></script>
         <script src="script/popper.min.js"></script>
         <script src="script/bootstrap.min.js"></script>        
     </head>
     <body>
-
-    <nav id="navbar-site" class="navbar navbar-dark bg-dark navbar-expand-sm sticky-top">
-        <div class="container">
-            <div class="navbar-nav">
-                <a class="navbar-brand nav-item nav-link active" href="index.html">Forside</a>
-                <div class="dropdown">
-                    <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">HTML</a>
-                    <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                        <a class="dropdown-item" href="pages/semanticelements.html"  >Semantic Elements</a>
-                        <a class="dropdown-item" href="pages/canvas.html">Canvas element</a>
-                        <a class="dropdown-item" href="pages/billedevideo.html" >Billede og video element</a>
-                        <a class="dropdown-item" href="pages/form.html">Forms</a>
-                        <a class="dropdown-item" href="pages/microdata.html">Microdata</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <div id="navigation">
+        <script>    
+            $("#navigation").load("pages/navigation.html");
+        </script>
+    </div>
     <div class="container">
         <h1>HTML5 gruppeopgave</h1>
         <p>Sprint 1 - Præsentation 25.2.2019 </p>
