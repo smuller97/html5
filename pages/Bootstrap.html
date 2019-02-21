@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>Bootstrap</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
+        <link rel="icon" href="../files/icon.png" type="image/png">  <!--ICON--> <!-- From https://www.iconfinder.com/icons/430099/heart_icon -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="../script/jquery-3.3.1.min.js"></script>
+        <script src="../script/popper.min.js"></script>
+        <script src="../script/bootstrap.min.js"></script> 
+    </head>
+    <body>
+        <div id="navigation">
+                <script>    
+                    $("#navigation").load("navigation.html");
+                </script>
+        </div>
+        <div class="container">
+            <h1 style="text-align: center">Bootstrap</h1>
+            <p>Bootstrap er et mobilefirst CSS framework. 
+                Det vil sige at bootstrap tillader nemmere devlopment til alle skærmstørrelser. 
+                Dette opnåes via brug af det 12 colloner brede grid. 
+                Griddet kan herefter modificeres til de 5 skærmstørrelsesvider bootstrap baseres på.</p><br>
+            <p>Bootstrap indeholder også en basal css, som gør din side pænnere</p><br>
+            <p class="linje"></p>
+        <h2>Kode eksempler</h2>
+        <div class="row">
+            <div class="col">
+                <b style="text-align: center">.Container</b><br>
+                <p>Container er en class lavet af bootsrap, som centrerer dit indhold, og som ændrer størrelse altefter skærmstørrelse.</p>
+            </div><!--col-->
+            <div class="col">
+                <b style="text-align: center">.col-sm-3</b><br>
+                <p>Koden her bestemer hvor meget af breden på 12, som denne del af koden skal indeholde på skræmbilleder større end ekstra small skærme</p><br>
+                <p>Her benyttes css grid, som bootstrap udbygger med skærmstørrelser. Når man er i container elementet, så har man adgang til columns og rows. Disse giver en fleksibel, og relativ nem måde at konstruere en mobilvenlig side</p>
+                </div><!--col-->
+            <div class="col">
+                <b style="text-align: center">.mb-3</b><br>
+                <p>Dette er margin bottom, virker som vi kender det ved at tilføje margin til bunden af elementet</p>
+            </div><!--col-->
+            <div class="col">
+                <b style="text-align: center">.bg-dark</b>
+                <p>Ændrer baggrunden af elementet til farven dark</p>
+            </div>
+        </div><!--row-->
+        </div><!--container-->
+
+        
+    </body>
+</html>
