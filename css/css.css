@@ -31,5 +31,6 @@ header{
 }
 body{
     margin: 0;
-    padding-top: 65px; 
+    padding-top: 65px;
+    padding-bottom: 2em; 
 }
