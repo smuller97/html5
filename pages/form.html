@@ -7,29 +7,16 @@
         <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
         <link rel="icon" href="../files/icon.png" type="image/png">  <!--ICON--> <!-- From https://www.iconfinder.com/icons/430099/heart_icon -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="../script/jquery-3.3.1.slim.min.js"></script>
+        <script src="../script/jquery-3.3.1.min.js"></script>
         <script src="../script/popper.min.js"></script>
         <script src="../script/bootstrap.min.js"></script> 
     </head>
     <body>
-        <!-- Navigation bar-->
-        <nav id="navbar-site" class="navbar navbar-dark bg-dark navbar-expand-sm sticky-top">
-                <div class="container">
-                    <div class="navbar-nav">
-                        <a class="navbar-brand nav-item nav-link" href="../index.html">Forside</a>
-                        <div class="dropdown">
-                            <a class="nav-item nav-link dropdown-toggle" data-toggle="dropdown" id="servicesDropdown" aria-haspopup="true" aria-expanded="false" href="#">HTML</a>
-                            <div class="dropdown-menu" aria-labelledby="servicesDropdown">
-                                <a class="dropdown-item" href="semanticelements.html"  >Semantic Elements</a>
-                                <a class="dropdown-item" href="canvas.html">Canvas element</a>
-                                <a class="dropdown-item" href="billedevideo.html" >Billede og video element</a>
-                                <a class="dropdown-item active" href="form.html">Forms</a>
-                                <a class="dropdown-item" href="microdata.html">Microdata</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </nav>
+    <div id="navigation">
+        <script>    
+            $("#navigation").load("navigation.html");
+        </script>
+    </div>
     <div class="container">
         <h1 style="text-align: center">Forskelige Forms</h1>
         <div class="row">
