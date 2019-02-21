@@ -36,7 +36,7 @@ var centery = context.canvas.height / 2; //midten på y aksen
      
     if (stopper==false)
     {
-        if (sving >=6.2) //svig drejer spiralen, indtil under 6.2 hvilket er en runde
+        if (sving >6.28) //sving drejer spiralen, indtil under 6.2 hvilket er en runde
         {
         sving =0; 
         }
