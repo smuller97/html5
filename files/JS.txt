@@ -1,0 +1,5 @@
+<h3>JavaScript</h3>
+<p>Forkortelsen for JavaScript = JS</p>
+<p>JS er et ligthweight objekt-orienteret programmeringssprog og er bedst kendt som scripting sprog til Websider.</p>
+<p>Selvom JS er bedst kendt for webudvikling, kan JS også bruges til miljøer der ikke findes i browseren.</p>
+<p>Kode køres på klient-siden af nettet og bruges til at designe, og udvikle den adfærd siden skal have.</p>

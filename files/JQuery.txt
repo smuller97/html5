@@ -1,0 +1,4 @@
+<h3>Hvad er JQuery?</h3>
+<p>JQuery er et open source JavaScript library, som gør det det nemmere og hurtigere at skrive kode til sin webside.</p>
+<p>Før at bruge JQuery, skal man i sin HTML-fil tilføje en reference til JQuery's library. Dette gøres</p>
+<p>Herunder ses et eksempel på en animation, lavet med JQuery.</p>

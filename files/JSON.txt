@@ -1,0 +1,7 @@
+<h3>JSON</h3>
+<p>JSON står for JavaScript Object Notation.</p>
+<p>JSON formattet bruges til serializing og transmitting af struktureret data via netværksforbindelser. Kan bruges med moderne programmeringssprog
+som JS. Bruges primært til at transmitte data mellem en server og en web applikation.</p>
+<p>Formattet er nemt at læse og er sprog-uafhængig. JSON er et tekstbaseret format.</p>
+<p>Eksempel på JSON:</p>
+<img src="../files/example_JSON.PNG" alt="Eksempel på JSON">

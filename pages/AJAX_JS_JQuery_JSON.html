@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+            <title>AJAX</title>
+            <meta charset="UTF-8">            
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
+            <link rel="icon" href="../files/icon.png" type="image/png">  <!--ICON--> <!-- From https://www.iconfinder.com/icons/430099/heart_icon -->
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <script src="../script/jquery-3.3.1.min.js"></script>
+            <script src="../script/popper.min.js"></script>
+            <script src="../script/bootstrap.min.js"></script> 
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+    <style>
+        .button {
+          background-color: rgb(59, 59, 59);
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+    </style>
+    <body>
+    <div id="navigation">
+        <script>    
+            $("#navigation").load("/html5/pages/navigation.html");
+        </script>
+    </div>
+    <div class="container">
+        <h1>AJAX, JS, JQuery og JSON</h1>
+        <br>
+        <h3>Nedenfor findes en div-container, som ændres ved klik på knapper.</h3>
+        <h3>Indholdes ændres med JS, ved brug af AJAX. Dette indholde opbevares i seperate filer.</h3>
+        <br>
+
+        <button class="button" type="button" onclick="hent_Ajax()">AJAX</button>
+        <button class="button" type="button" onclick="hent_JS()">JavaScript</button>
+        <button class="button" type="button" onclick="hent_JSON()">JSON</button>
+        <button class="button" type="button" onclick="hent_JQuery()">JQuery</button>
+        <br>
+
+        <div id="ajaxCon" style="background-color:rgb(228, 228, 228);"><!--container, til at ændre med JS til indhold fra fil, via AJAX-->
+            <h3>Tryk på knapperne for at få vist tilhørende info.</h3>
+        </div>
+
+        <script>
+            function hent_Ajax() {//funktion som kaldes ved btnClick hent_Ajax
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    document.getElementById("ajaxCon").innerHTML =
+                    this.responseText;
+                }
+                };
+                xhttp.open("GET", "../files/ajax.txt", true);
+                xhttp.send();
+            }
+            function hent_JS() {//funktion som kaldes ved btnCLick hent_JS
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    document.getElementById("ajaxCon").innerHTML =
+                    this.responseText;
+                }
+                };
+                xhttp.open("GET", "../files/JS.txt", true);
+                xhttp.send();
+            }
+            function hent_JSON() {//funktion som kaldes ved btnCLick hent_JSON
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    document.getElementById("ajaxCon").innerHTML =
+                    this.responseText;
+                }
+                };
+                xhttp.open("GET", "../files/JSON.txt", true);
+                xhttp.send();
+            }
+            function hent_JQuery() {//funktion som kaldes ved btnCLick hent_JQuery
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) 
+                {
+                    document.getElementById("ajaxCon").innerHTML =
+                    this.responseText;
+                }
+                };
+                xhttp.open("GET", "../files/JQuery.txt", true);
+                xhttp.send();
+            }
+        </script>
+        <h3>Eksempel på JQuery i brug:</h3>
+        <p>I dette eksempel bruges animate. Tryk på knappen for at skjule eller vise boksen.</p>
+        <button id="btnAnimate">Tryk</button>
+        <div id="box" style="background:rgb(59, 59, 59);position:absolute;height: 50px; width: 200px;">
+        </div>
+        <script> 
+            $(document).ready(function(){
+              $("#btnAnimate").click(function(){
+                $("#box").animate({height: 'toggle'});
+              });
+            });
+        </script>
+    </div>
+    <footer id="footer" class="fixed-bottom">
+        <script>    
+            $("#footer").load("/html5/pages/footer.html");
+        </script>
+    </footer>
+    </body>
+</html>
