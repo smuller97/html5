@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>DOM og BOM</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
+        <link rel="icon" href="../files/icon.png" type="image/png">  <!--ICON--> <!-- From https://www.iconfinder.com/icons/430099/heart_icon -->
+        <script src="../script/jquery-3.3.1.min.js"></script>
+        <script src="../script/popper.min.js"></script>
+        <script src="../script/bootstrap.min.js"></script> 
+    </head>
+    
+    <body>
+        <!-- Navigationbar-->
+        <div id="navigation">
+            <script>    
+                $("#navigation").load("/html5/pages/navigation.html");
+            </script>
+        </div>
+
+        <div class="container">
+            <div style="background-color: lightblue;">
+                <p><b>Find HTML Elements med Id</b></p>
+                <p id="intro">Hello World!</p>
+                <p>Demonstration af metoden <b>getElementsById</b>.</p>
+                <p id="demo"></p>
+            </div>
+            <br>
+            <div>
+                <p style="background-color:pink" id="skaerm"></p>      
+            </div>
+            <p class="linje"></p>
+            <h1 style=" text-align: center;">Forklaring</h1><!-- Forklaring-->
+            <!-- https://www.w3schools.com/whatis/whatis_htmldom.asp -->
+            <!-- https://www.w3.org/TR/DOM-Level-2-Core/introduction.html -->
+            <h1 style=" text-align: center; background-color: lightblue;"> html DOM</h1>
+            <p>html DOM er en forkortelse for Document Object Model. DOM bliver oprettet når en webside er indlæst. DOM udseeendet er som et træ med parents, leafs og en root. 
+                <br> html DOM deffinere det følgende:
+            </p>
+            <ul>
+                <li>HTML elementer som objekter</li>
+                <li>Proterties for alle HTML elementerne </li>
+                <li>Metoder for alle HTML elementerne</li>
+                <li>Events for HTML elementerne</li>
+            </ul>
+            <p>For JavaScript er html DOM et API, hvilket vil sige det er et programmerings interface. </p>
+            <p>Det betyder JavaScript kan:  </p>
+            <ul>
+                <li>tilføje, ændre, slette HTML elementer</li>
+                <li>tilføje, ændre, slette HTML attributter</li>
+                <li>tilføje, ændre, slette CSS styles</li>
+                <li>reagere på HTML events</li>
+                <li>tilføje, ændre, slette HTML events</li>
+            </ul>
+
+            <h1 style=" text-align: center; background-color: pink;">JS browser BOM</h1>
+            <!-- https://www.w3schools.com/js/js_window.asp -->
+            <p>
+                BOM er en forkortelse for Browser Object Model. DOM gør det muligt for Javascript at kommunikere med browseren.
+            </p>
+        </div>
+        <script>
+            var myElement = document.getElementById("intro");
+            document.getElementById("demo").innerHTML = 
+            "Tekst fra intro elementet: " + myElement.innerHTML;
+        </script>
+        <script>
+            var w = window.innerWidth
+            || document.documentElement.clientWidth
+            || document.body.clientWidth;
+            
+            var h = window.innerHeight
+            || document.documentElement.clientHeight
+            || document.body.clientHeight;
+            
+            var x = document.getElementById("skaerm");
+            x.innerHTML = "Browser inner window width: " + w + ", height: " + h + ".";
+        </script>
+        <footer id="footer" class="fixed-bottom">
+            <script>    
+                $("#footer").load("/html5/pages/footer.html");
+            </script>
+        </footer>
+    </body>
+</html>

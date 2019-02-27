@@ -1,0 +1,5 @@
+<h3>Hvad er AJAX?</h3>
+<p>AJAX = Asynchronous JavaScript And XML</p>
+<p>AJAX er IKKE et programmeringssprog. 
+Selvom XML indgår i navnet, er det også meget alment at transporterer data via JSON eller bare Plain Text.</p>
+<p>Ved brug af AJAX, er det muligt at ændre indholdet på en side, uden at skulle opdaterer siden hver gang. Denne boks bruger f.eks. AJAX.</p>
