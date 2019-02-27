@@ -4,4 +4,4 @@
 Selvom XML indgår i navnet, er det også meget alment at transporterer data via JSON eller bare Plain Text.</p>
 <p>Ved brug af AJAX, er det muligt at ændre indholdet på en side, uden at skulle opdaterer siden hver gang. Denne boks bruger f.eks. AJAX.</p>
 <p>Kilder: </p>
-<p>https://www.w3schools.com/js/js_ajax_examples.asp</p>
+<a href="https://www.w3schools.com/js/js_ajax_examples.asp">https://www.w3schools.com/js/js_ajax_examples.asp</a>

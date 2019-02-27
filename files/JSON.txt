@@ -6,4 +6,4 @@ som JS. Bruges primært til at transmitte data mellem en server og en web applik
 <p>Eksempel på JSON:</p>
 <img src="../files/example_JSON.PNG" alt="Eksempel på JSON">
 <p>Mere info og kilder:</p>
-<p>https://www.w3schools.com/jsref/jsref_obj_json.asp</p>
+<a href="https://www.w3schools.com/jsref/jsref_obj_json.asp">https://www.w3schools.com/jsref/jsref_obj_json.asp</a>
