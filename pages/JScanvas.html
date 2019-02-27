@@ -24,7 +24,10 @@
     <body onload="start()">
     <div id="navigation">
         <script>    
-            $("#navigation").load("/html5/pages/navigation.html");
+            $("#navigation").load("/html5/pages/navigation.html", function() {
+                var navHeight = $('#navbar-site').height() + 10;
+                $('body').css("padding-top", navHeight);
+            });
         </script>
     </div>
     <div class="container">

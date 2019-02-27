@@ -1,4 +1,2 @@
 User-Agent: *
 Disallow: /
-
-Sitemap: https://smuller97.github.io/html5/
