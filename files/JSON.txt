@@ -5,3 +5,5 @@ som JS. Bruges primært til at transmitte data mellem en server og en web applik
 <p>Formattet er nemt at læse og er sprog-uafhængig. JSON er et tekstbaseret format.</p>
 <p>Eksempel på JSON:</p>
 <img src="../files/example_JSON.PNG" alt="Eksempel på JSON">
+<p>Mere info og kilder:</p>
+<p>https://www.w3schools.com/jsref/jsref_obj_json.asp</p>
