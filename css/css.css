@@ -1,3 +1,7 @@
+#navigation {
+    display: inline-block;
+    padding-top: 50px;
+}
 .linje{
     margin-top: 1rem;
     margin-bottom: 1rem;
