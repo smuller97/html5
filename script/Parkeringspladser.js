@@ -12,22 +12,51 @@ function getChartData() {
     });
 }
 
+var gader = [];
+var antal = [];
 function hentet(result) {
  var data = JSON.parse(result);
 
- var gader = [];
+ var fundet =false;
+
+ gader.push(data.features[0].attributes.STED);
+ antal.push(1);
+
+    for (index = 0; index < data.features.length; ++index) 
+    {                    
+        for (i=0;i<gader.length;i++)
+        {
+            if (gader[i]==data.features[index].attributes.STED)
+            {
+                fundet=true;
+            }
+            else {}
+        }
+        if (fundet==true)
+        {
+            antal[antal.length-1] = antal[antal.length-1] + 1;
+        }
+        else    
+        {        
+            gader.push(data.features[index].attributes.STED);
+            antal.push(1);
+        }
+        fundet=false;
+    }
+
  var gadehtml ="";
 
- for (index = 0; index < data.features.length; ++index) 
- {     
-    gader.push(data.features[index].attributes.STED)
-    gadehtml = gadehtml + "<tr> <td> "+data.features[index].attributes.STED+" </td>    </tr> "
- }
- alert(data.features[0].attributes.STED);
+    for(i=0;i<gader.length;i++)
+    {
+        gadehtml =gadehtml + "<tr> <td> " + gader[i] + " </td> <td> "+antal[i]+" </td>   </tr>"
+    }
 
  var x = document.getElementById("myTable");
 
  x.innerHTML= gadehtml;
- 
- 
+  
+}
+function piechart()
+{
+    
 }
