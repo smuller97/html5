@@ -8,15 +8,22 @@
 
         <script src="../script/popper.min.js"></script>
         <script src="../script/bootstrap.min.js"></script> 
-        <script src="../script/Chart.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.js"></script>
     </head>
     <body onload="getChartData()" >
-
-
+        <div id="navigation">
+            <script>    
+                $("#navigation").load("/html5/pages/navigation.html");
+            </script>
+        </div>
         <table id="myTable">        
         </table> 
         <canvas id="myChart" width="400" height="400"></canvas>
 
     </body>
-
+    <footer id="footer" class="bottom">
+        <script>    
+            $("#footer").load("/html5/pages/footer.html");
+        </script>
+    </footer>
 </html>
