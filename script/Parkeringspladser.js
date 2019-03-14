@@ -3,8 +3,7 @@ function getChartData() {
     $.ajax({
         type: 'get',
         url: url,
-        success: function (result) {       
-        
+        success: function (result) {            
             hentet(result);
         },
         error: function (err) {

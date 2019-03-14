@@ -12,11 +12,11 @@
         <link rel="shortcut icon" href="../files/favicon.ico"/>  <!--ICON--> <!-- From https://www.iconfinder.com/icons/430099/heart_icon -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="../script/jquery-3.3.1.min.js"></script>
-        <script src="../script/popper.min.js"></script>
+        <script scr="../script/popper.min.js"></script>
         <script src="../script/bootstrap.min.js"></script> 
         <script src="../node_modules/chart.js/dist/Chart.js"></script>
     </head>
-    <body  onload="getChartData()">
+    <body  >
         <div id="navigation">
             <script>    
                 $("#navigation").load("/html5/pages/navigation.html");
@@ -24,6 +24,7 @@
         </div> 
         <table id="myTable">        
         </table> 
+        <button onclick="getChartData()"> Load Chart </button>
         <canvas id="myChart" width="400" height="400" ></canvas>
 
     </body>
