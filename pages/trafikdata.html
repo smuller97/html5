@@ -10,7 +10,8 @@
         <link rel="shortcut icon" href="../files/favicon.ico"/>  <!--ICON--> <!-- From https://www.iconfinder.com/icons/430099/heart_icon -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-        <script src="../script/jquery-3.3.1.min.js"></script>
+        <!--<script src="../script/jquery-3.3.1.min.js"></script>-->
+        <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="../script/popper.min.js"></script>
         <script src="../script/bootstrap.min.js"></script> 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
@@ -28,12 +29,19 @@
         <div class="container">
             <h1>Trafikdata for Vejle kommune</h1>
             <div class="row">
-                <select id="vejnavne" size="20" class="col">
+                <div class="col-6">
+                    Vejnavne:<br>
+                    <select id="vejnavne" size="20" style="width:100%">
 
-                </select><!--col-->
-                <select id="år" size="10" class="col">
 
-                </select><!--col-->
+                    </select>
+                </div><!--col-->
+                <div class="col-6">
+                    Årstal:<br>
+                    <select id="år" size="10" style="width:100%">
+
+                        </select><!--col-->
+                </div><!--col-->
             </div><!--row-->
             <div class="row">
                 <canvas id="barChart" class="col-9">

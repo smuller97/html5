@@ -1,10 +1,12 @@
 
 
 function fyldListe(){
-    $ajax({
-        url: "http://kortservice.vejle.dk/gis/rest/services/OPENDATA/Vejle/MapServer/0/query?where=OBJECTID%3C%3E0&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&f=pjson",
+    $.ajax({
+        url: "https://kortservice.vejle.dk/gis/rest/services/OPENDATA/Vejle/MapServer/0/query?where=OBJECTID%3C%3E0&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=4326&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&f=pjson",
         succes: function(result) {
-            var vejliste = document.getElementById(vejnavne);
+            console.log(result);
+            /*
+            var vejliste = document.getElementById("vejnavne");
             var erIListe = false;
             for(item = 0; item < result.features.length; ++item){
                 var vejnavn = result.features[item].attributes.Lokalitet;
@@ -25,8 +27,12 @@ function fyldListe(){
                 }
                 erIListe = false;
             }
+            */
+        },
+        error: function(err){
+            alert(err)
         }
-    })
+    });
 }
 
 function renderChart(ÅDT, JDT, HDT, Lbil, year){
