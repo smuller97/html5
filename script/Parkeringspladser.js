@@ -15,7 +15,7 @@ function getChartData() {
 var gader = [];
 var antal = [];
 function hentet(result) {
- var data = JSON.parse(result);
+ var data = result;//JSON.parse()
 
  var fundet =false;
 
