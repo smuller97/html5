@@ -2,6 +2,7 @@ function getChartData() {
     var url ='http://kortservice.vejle.dk/gis/rest/services/OPENDATA/Vejle/MapServer/3/query?where=OBJECTID%3C%3E0&text=&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&relationParam=&outFields=*&returnGeometry=true&maxAllowableOffset=&geometryPrecision=&outSR=&returnIdsOnly=false&returnCountOnly=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&returnZ=false&returnM=false&gdbVersion=&returnDistinctValues=false&f=pjson';
     $.ajax({
         type: "post",
+        datatype: "json" ,
         url: url,
         success: function (result) {            
             hentet(result);
@@ -15,7 +16,7 @@ function getChartData() {
 var gader = [];
 var antal = [];
 function hentet(result) {
- var data = result;//JSON.parse()
+ var data = JSON.parse(result);
 
  var fundet =false;
 
