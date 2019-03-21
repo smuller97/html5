@@ -16,7 +16,7 @@ function fyldListe(){
 
                 for(vej = 0; vej < vejliste.length; ++vej){
                     if(vejid == vejListe.value[vej]){
-                        erIListe = true
+                        erIListe = true;
                     }
                 }
 
