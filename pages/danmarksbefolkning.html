@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="da">
     <head>
-        <title>Parkering</title>
+        <title>Befolknings tal</title>
         <meta charset="UTF-8">
         <script src="../script/danmarksbefolkning.js"> </script>
         <meta name="description" content="piechart">
@@ -14,7 +14,7 @@
         <script src="../script/jquery-3.3.1.min.js"></script>
         <script scr="../script/popper.min.js"></script>
         <script src="../script/bootstrap.min.js"></script> 
-        <script src="../node_modules/chart.js/dist/Chart.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js" integrity="sha384-WJu6cbQvbPRsw+66L1nOomDAZzhTALnUlpchFlWHimhJ9o95CMue7xEZXXDRKV2S" crossorigin="anonymous"></script>
     </head>
     <body onload="getChartData()" >
         <div id="navigation">
@@ -22,14 +22,22 @@
                 $("#navigation").load("/html5/pages/navigation.html");
             </script>
         </div> 
-        <div class="col-6">
-        <canvas id="myChart" width="400" height="400" ></canvas>
-        </div>
-        <div class="col-4">
-            <form>
-                <input type="text" id = "alder" value="0" required>
-            </form>
-            <button onclick="resetchart()">submit</button>
+
+        <div class="row">
+            <div class="col-6">
+                <canvas id="myChart" width="400" height="400" ></canvas>
+            </div>
+            <div class="col-1">
+                <form>
+                    <p>Alder:</p>
+                    <input style="width:100%" type="text" id = "alder" value="0" required>
+                </form>
+                <button style="width:100%" onclick="resetchart()">submit</button>
+            </div>
+            <div class="col-1">
+                <table  class="table table-striped col tablesorter" id="befolkningstable">
+                </table>
+            </div>
         </div>
     </body>
     <footer id="footer" class="bottom">
