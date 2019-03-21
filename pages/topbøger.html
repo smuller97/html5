@@ -17,21 +17,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js" integrity="sha384-WJu6cbQvbPRsw+66L1nOomDAZzhTALnUlpchFlWHimhJ9o95CMue7xEZXXDRKV2S" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js" integrity="sha384-QnFIXbEfAgO7z63b/aNzTSdSNLoNiNX/mk/Ok+NpUNMnvriWLo5cOtB0OUCAdKNu" crossorigin="anonymous"></script>
     </head>
-    <body>
+    <body onload="TopBøgerChart()">
         <div id="navigation">
             <script>    
                 $("#navigation").load("/html5/pages/navigation.html");
             </script>
         </div>
         <div class="container">
-            <h1 class="text-center">Top 100 Udlånte bøger på Vejle  Biblotek (2016)</h1>
-            <div class="row">
-                <button type="button" class="btn btn-light col mx-1" onclick="Knap1()">2016-01-29</button>
+            <h1 class="text-center">Top udlånte bøger på Vejle Biblotek (2016-01-29)</h1>
+            <!--<div class="row">
+                <button type="button" class="btn btn-primary col-4 mx-auto mb-1">2016-01-29</button>
                 <button type="button" class="btn btn-light col mx-1" onclick="Knap2()">2016-03-11</button>
                 <button type="button" class="btn btn-light col mx-1" onclick="Knap3()">2016-04-29</button>
                 <button type="button" class="btn btn-light col mx-1" onclick="Knap4()">2016-06-15</button>
                 <button type="button" class="btn btn-light col mx-1" onclick="Knap5()">2016-09-02</button>
-            </div><!--row-->
+            </div> button row-->
             <div class="row">
                 <canvas id="chartCanvas" class="col" height="400"></canvas>
                 <table class="table table-striped col tablesorter" id="fulltable">
