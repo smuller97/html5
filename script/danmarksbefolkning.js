@@ -19,25 +19,27 @@ var women = [];
 var men = [];
 var total = [];
 var year = [];
-var myLineChart = new Chart(ctx, {
+var myLineChart;/* = new Chart(ctx, {
     type: 'line',
     data: men
-    });
+    });*/
 function hentet(result) {
 
     var today = new Date();
     var yyyy = today.getFullYear();
 
     var x=0;
+    var tablehtml = "<tr><th>Year</th> <th>Females</th><th>Males</th><th>Total</th> </tr>";
 
     for (let index = result[0].year; index <= yyyy; index++) {
         women[x]=result[x].females;
         men[x]=result[x].males;
         total[x]=result[x].total;
         year[x]=result[x].year;
+        tablehtml = tablehtml + " <tr> <td>"+result[x].year+"</td><td>"+result[x].females+"</td><td>"+result[x].males+"</td><td>"+result[x].total+"</td> </tr>"
         x++;
     }
-
+    document.getElementById("befolkningstable").innerHTML=tablehtml;
     
     
     var ctx = document.getElementById("myChart");
@@ -46,10 +48,10 @@ function hentet(result) {
         data: {
             labels: year,        
             datasets:[{
-                label: 'Women',
+                label: 'Females',
                 data: women,year
             },{
-                label: 'Men',
+                label: 'Males',
                 data: men,year
             },{
                 label: 'Total',

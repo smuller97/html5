@@ -22,14 +22,22 @@
                 $("#navigation").load("/html5/pages/navigation.html");
             </script>
         </div> 
-        <div class="col-6">
-        <canvas id="myChart" width="400" height="400" ></canvas>
-        </div>
-        <div class="col-4">
-            <form>
-                <input type="text" id = "alder" value="0" required>
-            </form>
-            <button onclick="resetchart()">submit</button>
+
+        <div class="row">
+            <div class="col-6">
+                <canvas id="myChart" width="400" height="400" ></canvas>
+            </div>
+            <div class="col-1">
+                <form>
+                    <p>Alder:</p>
+                    <input style="width:100%" type="text" id = "alder" value="0" required>
+                </form>
+                <button style="width:100%" onclick="resetchart()">submit</button>
+            </div>
+            <div class="col-1">
+                <table  class="table table-striped col tablesorter" id="befolkningstable">
+                </table>
+            </div>
         </div>
     </body>
     <footer id="footer" class="bottom">
