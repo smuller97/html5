@@ -19,7 +19,10 @@ var women = [];
 var men = [];
 var total = [];
 var year = [];
-var myLineChart;
+var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: men
+    });
 function hentet(result) {
 
     var today = new Date();
