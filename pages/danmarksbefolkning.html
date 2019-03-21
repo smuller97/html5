@@ -3,7 +3,7 @@
     <head>
         <title>Parkering</title>
         <meta charset="UTF-8">
-        <script src="../script/Parkeringspladser.js"> </script>
+        <script src="../script/danmarksbefolkning.js"> </script>
         <meta name="description" content="piechart">
         <meta name="keywords" content="piechart">
         <meta name="author" content="Anders"> 
@@ -22,10 +22,15 @@
                 $("#navigation").load("/html5/pages/navigation.html");
             </script>
         </div> 
-        <table id="myTable">        
-        </table> 
+        <div class="col-6">
         <canvas id="myChart" width="400" height="400" ></canvas>
-
+        </div>
+        <div class="col-4">
+            <form>
+                <input type="text" id = "alder" value="0" required>
+            </form>
+            <button onclick="resetchart()">submit</button>
+        </div>
     </body>
     <footer id="footer" class="bottom">
         <script>    
