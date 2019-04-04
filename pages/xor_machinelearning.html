@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="da">
+    <head>
+        <title>XOR machinelearning</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="billede og video element">
+        <meta name="keywords" content="XOR, Machine Learning">
+        <meta name="author" content="Tomas"> 
+        <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
+        <link rel="shortcut icon" href="../files/favicon.ico"/>  <!--ICON--> <!-- From https://www.iconfinder.com/icons/430099/heart_icon -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <script src="../script/xormachinelearning.js"></script>
+        <script src="../script/jquery-3.3.1.min.js"></script>
+        <script src="../script/popper.min.js"></script>
+        <script src="../script/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.1.4/synaptic.min.js" integrity="sha256-t3MKDO0e1ULGddDg4QswIm9r1ZfOzguJLRk2TFuRsIg=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <form action="#">
+            <input type="number" id="x">
+            <input type="number" id="y">
+            <button onclick="Begin()">Indsæt</button>
+            <button onclick="Learn()">Learn</button>
+        </form>
+        <p id="logging">Learn log: </p>
+        <table id="tabel" class="table table-responsive">
+            <tr>
+                <th>X</th>
+                <th>Y</th>
+                <th>Actual</th>
+                <th>Machine</th>
+            </tr>
+        </table>
+
+    </body>
+</html>
