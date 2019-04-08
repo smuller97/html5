@@ -1,0 +1,90 @@
+<!-- https://www.youtube.com/watch?v=JiPUPr-hedo - tutorial fuldt -->
+<!--  Brain.js, der er anvendet er et library  af Neural Networks skrevet i JavaScript.-->
+<!DOCTYPE html>
+<html lang="DK" > <!--Danmark kode -->
+    <head>
+        <meta charset="UTF-8">
+        <title> Machine Learning - JAVASCRIPT eksempel</title>
+        <meta name="keywords" content="CSS">
+        <meta name="author" content="Kristine">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/css.css" media="screen"> <!--Stylesheet-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../files/favicon.ico"/>  <!--ICON--> <!-- From https://www.iconfinder.com/icons/430099/heart_icon -->
+        <script src="../script/jquery-3.3.1.min.js"></script>
+        <script src="../script/popper.min.js"></script>
+        <script src="../script/bootstrap.min.js"></script> 
+    </head>
+    <style>
+    body {
+    font-family: helvetica neue;
+    }
+    #example {
+        padding: 100px;
+        background: #ff0000;
+        color: white;
+        font-size: 36px;
+    }
+    </style>
+    <body>
+         <!-- Navigationbar-->
+        <div id="navigation">
+            <script>    
+            $("#navigation").load("/html5/pages/navigation.html");
+            </script>
+        </div>
+        <input type="color" value="#ff0000"/>
+        <div id="example">Test tekst</div>
+
+        <br>
+        <h1>Testdata</h1>
+        <div style="background-color: rgb(62,72,88); color:rgb(255,255,255)"> 1</div> <!-- Mørk grå så er fonten lys -->
+        <div style="background-color: rgb(1,84,72); color:rgb(255,255,255)"> 2</div> <!--Mørk grøn så er fonten lys-->
+        <div style="background-color: rgb(33,24,29);"> 3</div> <!-- mørk brun mørk font mørk-->
+        <div style="background-color: rgb(74,78,86); color:rgb(255,255,255)"> 4</div> <!--lidt mørkere grå font lys-->
+        <div style="background-color: rgb(31,35,41);"> 5</div><!--mørk grå font mørk-->
+        <div style="background-color: rgb(1,99,0); color:rgb(255,255,255)"> 6</div> <!--lysere grøn - lys font-->
+        <div style="background-color: rgb(1,42,52);"> 7</div> <!--lysere grøn - lys font-->
+        
+        <script src='https://unpkg.com/brain.js@1.1.2/browser.min.js'></script> <!-- Impotering af Brain.js filen-->
+        <script>
+        //Problem. Teksten skal ændre farve alt efter en baggrundsfarve er lys eller mørk.
+        const input = document.querySelector("input") //henter input
+        const example = document.querySelector("#example") //henter example
+
+        input.addEventListener("change", (e) => {
+        const rgb = getRgb(e.target.value); //Modtager RGB værdi fra det indtastede felt og kalder metoden der konvatere til rgb fra hex.
+        const network = new brain.NeuralNetwork()
+        console.log(rgb);
+        network.train([
+            { input: { r: 0.62, g: 0.72, b: 0.88 }, output: { light: 1 } }, //Mørk grå så er fonten lys
+            { input: { r: 0.1, g: 0.84, b: 0.72 }, output: { light: 1 } }, //Mørk grøn så er fonten lys
+            { input: { r: 0.33, g: 0.24, b: 0.29 }, output: { dark: 1 } }, // mørk brun mørk font mørk
+            { input: { r: 0.74, g: 0.78, b: 0.86 }, output: { light: 1 } }, // lidt mørkere grå font lys
+            { input: { r: 0.31, g: 0.35, b: 0.41 }, output: { dark: 1 } }, //mørk grå font mørk
+            { input: {r: 1, g: 0.99, b: 0}, output: { light: 1 } }, //lysere grøn - lys font
+            { input: {r: 1, g: 0.42, b: 0.52}, output: { dark: 1 } }, // patrolium farve mørk font
+        ]) //Test af netværk
+
+        const result = brain.likely(rgb, network) //Brain.js tjækker om ligt is larger than dark then it is light og vise versa
+        console.log(result);
+        example.style.background = e.target.value //baggrundsfarven ændres til den valgte farve
+        example.style.color = result === "dark" ? "white" : "black" //Er resultatet black så retuneres hvid tekst ellers er standarden det er hvistekst 
+        })
+
+        function getRgb(hex) { //funktion der konvatere hex-decimaler til rgb.
+        var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
+        hex = hex.replace(shorthandRegex, function(m, r, g, b) {
+            return r + r + g + g + b + b;
+        });
+
+        var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+        return result ? {
+            r: Math.round(parseInt(result[1], 16) / 2.55) / 100,
+            g: Math.round(parseInt(result[2], 16) / 2.55) / 100,
+            b: Math.round(parseInt(result[3], 16) / 2.55) / 100,
+        } : null;
+        }
+        </script> <!-- Importerting af JS filen-->
+    </body>
+</html>
