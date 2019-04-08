@@ -12,9 +12,9 @@ function Begin() {
     cell1.innerHTML = x;
     cell2.innerHTML = y;
     cell3.innerHTML = xor(x,y);
-    cell4.innerHTML = "helloworld";
+    cell4.innerHTML = Learn(x,y);
 
-    Learn();
+    
 }
 function xor(a,b){
      if (( a || b ) && !( a && b ))
@@ -23,9 +23,25 @@ function xor(a,b){
         return 0
 }
 
-function Learn(){
-    const synaptic = require('synaptic');
+function Learn(x,y){ 
+    const Neuron = synaptic.Neuron,
+    Layer = synaptic.Layer,
+    Network = synaptic.Network,
+    Trainer = synaptic.Trainer,
+    Architect = synaptic.Architect;
+    
+    const myNetwork = new Architect.Perceptron(2, 3, 1);
+    const myTrainer = new Trainer(myNetwork);
 
-    var myPerceptron = new synaptic.Architect.Perceptron(2,3,1);
-    perceptron.trainer.XOR();
+    var logging = document.getElementById("logging");
+    var training = myTrainer.XOR({ error: 0.00001 });
+    console.log(training);
+
+    logging.innerHTML = "Learn log: Iterations: " + training.iterations + 
+    "MSE: " + (training.error).toFixed(6) + 
+    "time: " + training.time + " ms";
+
+    var machineNum = myNetwork.activate([x, y])
+
+    return machineNum[0].toFixed(3);
 }

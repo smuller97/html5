@@ -17,21 +17,43 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/synaptic/1.1.4/synaptic.min.js" integrity="sha256-t3MKDO0e1ULGddDg4QswIm9r1ZfOzguJLRk2TFuRsIg=" crossorigin="anonymous"></script>
     </head>
     <body>
-        <form action="#">
-            <input type="number" id="x">
-            <input type="number" id="y">
-            <button onclick="Begin()">Indsæt</button>
-            <button onclick="Learn()">Learn</button>
-        </form>
-        <p id="logging">Learn log: </p>
-        <table id="tabel" class="table table-responsive">
-            <tr>
-                <th>X</th>
-                <th>Y</th>
-                <th>Actual</th>
-                <th>Machine</th>
-            </tr>
-        </table>
-
+        <div id="navigation">
+            <script>    
+                $("#navigation").load("/html5/pages/navigation.html");
+            </script>
+        </div>
+        <div class="container">
+            <h1 class="text-center">XOR machine learning</h1>
+            <div class="row justify-content-center">
+                <div class="col-4">
+                    <form action="#">
+                        <div class="form-group">
+                            <input type="number" id="x" class="form-control" placeholder="X" max="1">
+                            <input type="number" id="y" class="form-control" placeholder="Y" max="1">
+                        </div>
+                        <div>
+                            <button onclick="Begin()" class="btn btn-primary w-100">Start</button>
+                        </div>
+                    </form>                    
+                </div>
+                <div class="col-4">
+                    <table id="tabel" class="table">
+                        <tr>
+                            <th>X</th>
+                            <th>Y</th>
+                            <th>Actual</th>
+                            <th>Machine</th>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <p></p>
+            <p id="logging">Learn log: </p>
+        </div> <!--container-->
+        <footer id="footer" class="bottom">
+            <script>    
+                $("#footer").load("/html5/pages/footer.html");
+            </script>
+        </footer>
     </body>
 </html>
