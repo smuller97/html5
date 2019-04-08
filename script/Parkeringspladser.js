@@ -19,23 +19,24 @@ function hentet(result) {
  var data = JSON.parse(result);
 
  var fundet =false;
-
+ var fundetplads;
  gader.push(data.features[0].attributes.STED);
  antal.push(1);
 
-    for (index = 0; index < data.features.length; ++index) 
+    for (index = 1; index < data.features.length; ++index) 
     {                    
         for (i=0;i<gader.length;i++)
         {
             if (gader[i]==data.features[index].attributes.STED)
             {
                 fundet=true;
+                fundetplads=i;
             }
             else {}
         }
         if (fundet==true)
         {
-            antal[antal.length-1] = antal[antal.length-1] + 1;
+            antal[fundetplads] = antal[fundetplads] + 1;
         }
         else    
         {        
